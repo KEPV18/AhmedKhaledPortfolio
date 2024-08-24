@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Khaled Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.min.css"> <!-- تم تصغير ملف CSS -->
+    <meta name="description" content="Ahmed Khaled Portfolio - Web Designer and Developer.">
+    <meta name="keywords" content="Web Design, Front-end Development, UX Design, Ahmed Khaled">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: #ff4757;">Ahmed Khaled</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1 id="header-title">Hello, I am Ahmed Khaled. How are you?</h1>
+    </header>
+
+    <section id="about" class="about container">
+        <h2 class="text-center">About Me</h2>
+        <p>I am a passionate web designer with a background in graphic design and front-end development. My design style focuses on user-centered design, ensuring that each project not only looks great but also provides an excellent user experience. What makes me unique is my ability to blend creativity with technical skills, resulting in effective and visually appealing designs.</p>
+    </section>
+
+    <section id="projects" class="projects container">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4 project">
+                <h3>Project 1</h3>
+                <img src="path/to/image1.webp" alt="Project 1 - E-commerce Website" class="img-fluid lazyload">
+                <p>A responsive e-commerce website built using React and Node.js. Features include user authentication, product search, and shopping cart functionality.</p>
+                <p><strong>Challenges:</strong> Implementing secure user authentication. <br>
+                <strong>Solutions:</strong> Integrated JWT for secure token-based authentication.</p>
+                <a href="link-to-project1" class="btn btn-primary">View Project</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 project">
+                <h3>Project 2</h3>
+                <img src="path/to/image2.webp" alt="Project 2 - Blog Platform" class="img-fluid lazyload">
+                <p>A personal blog platform developed using Django and MySQL. Includes features like post creation, editing, and commenting.</p>
+                <p><strong>Challenges:</strong> Scaling the database for high traffic. <br>
+                <strong>Solutions:</strong> Optimized queries and implemented caching strategies.</p>
+                <a href="link-to-project2" class="btn btn-primary">View Project</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 project">
+                <h3>Project 3</h3>
+                <img src="path/to/image3.webp" alt="Project 3 - Chat Application" class="img-fluid lazyload">
+                <p>A real-time chat application built with Socket.io and Express. Supports multiple chat rooms and private messaging.</p>
+                <p><strong>Challenges:</strong> Ensuring real-time data delivery. <br>
+                <strong>Solutions:</strong> Used WebSocket for real-time communication.</p>
+                <a href="link-to-project3" class="btn btn-primary">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills container">
+        <h2 class="text-center">Skills</h2>
+        <div class="row">
+            <div class="col-md-4 skill">
+                <h3>Front-end Development</h3>
+                <p>HTML, CSS, JavaScript, React</p>
+                <p>Level: Advanced</p>
+            </div>
+            <div class="col-md-4 skill">
+                <h3>Back-end Development</h3>
+                <p>Node.js, Express, MongoDB</p>
+                <p>Level: Intermediate</p>
+            </div>
+            <div class="col-md-4 skill">
+                <h3>Database Management</h3>
+                <p>MySQL, MongoDB</p>
+                <p>Level: Intermediate</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services container">
+        <h2 class="text-center">Services</h2>
+        <ul>
+            <li>Web Design</li>
+            <li>User Experience Optimization</li>
+            <li>Branding Strategies</li>
+            <li>Responsive Web Development</li>
+        </ul>
+    </section>
+
+    <section id="testimonials" class="testimonials container">
+        <h2 class="text-center">Testimonials</h2>
+        <blockquote>
+            <p>"Ahmed is a fantastic developer who delivered on time!"</p>
+            <footer>- Client Name</footer>
+        </blockquote>
+        <blockquote>
+            <p>"His design skills are top-notch, and he truly understands user needs."</p>
+            <footer>- Another Client</footer>
+        </blockquote>
+    </section>
+
+    <section id="contact" class="contact-form">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Send</button>
+            </form>
+            <p>Or reach me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <a href="path/to/resume.pdf" class="btn btn-secondary">Download CV</a>
+        </div>
+    </section>
+
+    <section id="blog" class="blog container">
+        <h2 class="text-center">Blog</h2>
+        <p>Check out my latest articles on design trends and best practices.</p>
+        <ul>
+            <li><a href="link-to-article1">Understanding User Experience</a></li>
+            <li><a href="link-to-article2">Responsive Design Tips</a></li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Ahmed Khaled. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" class="fab fa-github"></a>
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-telegram"></a>
+        </div>
+    </footer>
+
+    <button class="language-toggle" onclick="toggleLanguage()">EN/AR</button>
+    <script src="scripts.min.js"></script> <!-- تم تصغير ملف JavaScript -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent successfully!');
+        });
+
+        // Lazy Loading للصور
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyloadImages = document.querySelectorAll("img.lazyload");
+            if ("IntersectionObserver" in window) {
+                let imageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let image = entry.target;
+                            image.src = image.dataset.src;
+                            image.classList.remove("lazyload");
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                });
+
+                lazyloadImages.forEach(function(image) {
+                    imageObserver.observe(image);
+                });
+            } else {
+                let lazyloadThrottleTimeout;
+                lazyloadImages = document.querySelectorAll("img.lazyload");
+
+                function lazyload () {
+                    if(lazyloadThrottleTimeout) {
+                        clearTimeout(lazyloadThrottleTimeout);
+                    }
+
+                    lazyloadThrottleTimeout = setTimeout(function() {
+                        let scrollTop = window.pageYOffset;
+                        lazyloadImages.forEach(function(img) {
+                            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazyload');
+                            }
+                        });
+                        if(lazyloadImages.length == 0) { 
+                            document.removeEventListener("scroll", lazyload);
+                            window.removeEventListener("resize", lazyload);
+                            window.removeEventListener("orientationChange", lazyload);
+                        }
+                    }, 20);
+                }
+
+                document.addEventListener("scroll", lazyload);
+                window.addEventListener("resize", lazyload);
+                window.addEventListener("orientationChange", lazyload);
+            }
+        });
+    </script>
+</body>
+
+</html>

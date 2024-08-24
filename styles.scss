@@ -1,0 +1,178 @@
+// متغيرات الألوان
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$background-light: #f0f4f8;
+$text-color: #333;
+$subtext-color: #666;
+
+// تنسيق الهيدر
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    
+    .logo {
+        max-height: 60px;
+    }
+
+    .btn-light {
+        color: $secondary-color;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+
+        &:hover {
+            background-color: #e0e0e0;
+        }
+    }
+}
+
+// تنسيق القسم الترحيبي
+.welcome-section {
+    background-color: $background-light;
+    padding: 60px 0;
+    text-align: center;
+    
+    h1 {
+        font-size: 3rem;
+        color: $secondary-color;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 1.25rem;
+        color: $subtext-color;
+        margin-bottom: 30px;
+    }
+    
+    .btn-primary {
+        background-color: $primary-color;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.125rem;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// تنسيق قسم المشاريع
+.projects-section {
+    padding: 60px 0;
+    
+    h2 {
+        font-size: 2rem;
+        color: $secondary-color;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .card-img-top {
+        border-bottom: 2px solid #ddd;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        color: $text-color;
+    }
+
+    .card-text {
+        color: $subtext-color;
+    }
+}
+
+// تنسيق قسم المهارات
+.skills-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    
+    h2 {
+        font-size: 2rem;
+        color: $secondary-color;
+        margin-bottom: 40px;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        color: $secondary-color;
+    }
+
+    ul {
+        li {
+            font-size: 1.125rem;
+            color: $subtext-color;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// تنسيق قسم الشهادات
+.certificates-section {
+    padding: 60px 0;
+    
+    h2 {
+        font-size: 2rem;
+        color: $secondary-color;
+        margin-bottom: 30px;
+    }
+
+    .list-group-item {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+    }
+}
+
+// تنسيق قسم التواصل
+.contact-section {
+    background-color: $background-light;
+    padding: 60px 0;
+    
+    .form-control {
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .btn-primary {
+        background-color: $primary-color;
+        border: none;
+        padding: 12px 20px;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// تنسيق الفوتر
+.footer {
+    background-color: $secondary-color;
+    color: #ffffff;
+    padding: 20px 0;
+    
+    p {
+        margin: 0;
+    }
+
+    .btn-light {
+        color: #ffffff;
+        background-color: darken($secondary-color, 10%);
+        border: 1px solid $secondary-color;
+
+        &:hover {
+            background-color: darken($secondary-color, 20%);
+        }
+    }
+}
