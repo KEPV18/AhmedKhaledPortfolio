@@ -1,391 +1,116 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>أحمد خالد - مصمم مواقع وبرمجيات</title>
+    <title>Ahmed Khaled - Web Designer, Software Developer, KEPV | تصميم مواقع، تطوير برمجيات</title>
+    <meta name="description" content="Ahmed Khaled is a professional web designer and software developer. Specializing in web design, software solutions, and digital innovation. Based in Cairo, Egypt. | أحمد خالد هو مصمم مواقع محترف ومطور برمجيات متخصص في تصميم الويب والحلول البرمجية والابتكار الرقمي.">
+    <meta name="keywords" content="Ahmed Khaled, Web Designer, Software Developer, KEPV, KEPV185, Web Design, تصميم مواقع, تطوير برمجيات, Cairo, Egypt">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ahmed Khaled",
+      "url": "http://www.yourwebsite.com",
+      "image": "http://www.yourwebsite.com/images/logo.png",
+      "sameAs": [
+        "http://www.facebook.com/your-profile",
+        "http://www.linkedin.com/in/your-profile",
+        "http://www.github.com/your-profile"
+      ],
+      "jobTitle": "Web Designer and Software Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Your Company"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cairo",
+        "addressCountry": "EG"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-
-        .navbar-nav{
-            flex-direction:row-reverse;
-
+    
+    <!-- إضافة Google Translate -->
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ar,fr,es,de,it,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
         }
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            scroll-behavior: smooth;
-            margin-top: 70px; /* أضف مسافة لتجنب تغطية الهيدر للمحتوى */
-        }
-        header {
-            background-color: #1c1c1c;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        header .container {
-            display: flex;
-            flex-wrap: wrap; /* السماح بالتفاف العناصر إلى صفوف متعددة */
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #25D366;
-            margin: 0;
-        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-        /* تصميم الهيدر والقائمة المنسدلة */
-        .navbar-toggler {
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            display: inline-block;
-        }
-
-        .navbar-toggler:focus {
-            outline: none;
-        }
-
-        .navbar-toggler-icon {
-            background-color: #25D366;
-            border-radius: 5px;
-            padding: 5px;
-        }
-
-        .navbar-toggler-icon.open {
-            background-color: red; /* تغيير لون الأيقونة عند الفتح */
-        }
-
-        .navbar-collapse {
-            display: none; /* إخفاء القائمة المنسدلة بشكل افتراضي */
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .navbar-collapse.show {
-            display: flex; /* إظهار القائمة عند الفتح */
-        }
-
-        @media (min-width: 992px) {
-            .navbar-toggler {
-                display: none; /* إخفاء زر القائمة المنسدلة على الشاشات الكبيرة */
-            }
-
-            .navbar-collapse {
-                display: flex; /* عرض عناصر الهيدر بشكل كامل على الشاشات الكبيرة */
-                flex-direction: row;
-                justify-content: space-between;
-                background-color: transparent;
-                padding-top: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-collapse {
-                background-color: #1c1c1c;
-                padding: 1rem;
-                position: absolute;
-                top: 100%; /* عرض القائمة المنسدلة من الأعلى */
-                right: 0;
-                left: 0;
-                z-index: 999;
-            }
-        }
-
-        nav ul {
-            list-style: none;
-            padding-left: 0;
-            display: flex;
-            flex-wrap: wrap; /* السماح بالتفاف عناصر القائمة */
-            justify-content: center; /* تمركز عناصر القائمة في الشاشات الصغيرة */
-            gap: 10px;
-            width: 100%;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #25D366;
-        }
-
-        #welcome {
-            padding: 100px 0;
-            background: #1c1c1c;
-            color: white;
-            text-align: center;
-        }
-
-        #welcome h2 {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #25D366;
-        }
-
-        #welcome h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #bbbbbb;
-        }
-
-        #welcome p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        #about {
-            padding: 4rem 0;
-            background-color: #121212;
-        }
-
-        #about h2 {
-            color: #25D366;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-        }
-
-        #about p {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.2rem;
-            color: #bbbbbb;
-        }
-
-        #about figure {
-            display: flex;
-            justify-content: center;
-            margin-top: 3rem;
-        }
-
-        #about img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        #about img:hover {
-            transform: scale(1.1);
-        }
-
-        #services, #skills, #projects, #certificates, #blog {
-            padding: 4rem 0;
-            background-color: #1c1c1c;
-        }
-
-        h3 {
-            font-size: 2rem;
-            color: #25D366;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .card {
-            background-color: #2c2c2c;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            margin-bottom: 20px; /* إضافة مسافة بين البطاقات */
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card-body {
-            text-align: center;
-            padding: 2rem;
-            color: #ffffff;
-        }
-
-        .service-icon {
-            font-size: 4rem;
-            color: #25D366;
-        }
-
-        footer {
-            background-color: #1c1c1c;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
-        }
-
-        footer a {
-            color: #25D366;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #ffffff;
-        }
-
-        .footer-info {
-            margin-bottom: 1rem;
-        }
-
-        .footer-social {
-            margin-bottom: 1rem;
-        }
-
-        .footer-social a {
-            margin: 0 10px;
-            font-size: 1.5rem;
-        }
-
-        .footer-subscribe input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .footer-subscribe button {
-            padding: 10px 20px;
-            background-color: #25D366;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .footer-subscribe button:hover {
-            background-color: #1c7d1c;
-        }
-
-        .lang-switch {
-            cursor: pointer;
-        }
-
-        @media (min-width: 992px) {
-            .navbar-toggler {
-                display: none; /* إخفاء زر القائمة المنسدلة على الشاشات الكبيرة */
-            }
-
-            .navbar-collapse {
-                position: static;
-                width: auto;
-                height: auto;
-                flex-direction: row;
-                justify-content: space-between;
-                padding-top: 0;
-                background-color: transparent;
-            }
-
-            nav ul {
-                flex-direction: row;
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-collapse {
-                background-color: #1c1c1c;
-                padding: 1rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            #welcome {
-                padding: 50px 0;
-            }
-        }
-
-        @media (min-width: 768px) {
-            header h1 {
-                flex: initial; /* إلغاء امتداد العنوان الكامل على الشاشات الأكبر */
-                margin-bottom: 0;
-                text-align: left;
-            }
-
-            nav ul {
-                justify-content: flex-end; /* محاذاة القائمة إلى اليمين في الشاشات الكبيرة */
-                gap: 20px;
-            }
-        }
-    </style>
 </head>
-<body>
 
+<body>
     <header>
         <div class="container">
-            <h1>أحمد خالد</h1>
+            <h1>
+                <img src="logo.png" alt="Logo" id="logo">
+                Ahmed Khaled
+            </h1>
             <nav>
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#welcome">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">من أنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">الخدمات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">المهارات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">المشاريع</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certificates">الشهادات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">المدونة</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">تواصل معي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#welcome">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item"><span class="nav-link lang-switch" onclick="switchLanguage()">العربية</span></li>
-                    <li class="nav-item"><span class="nav-link lang-switch" onclick="switchLanguage()">EN</span></li>
+                    <li class="nav-item">
+                        <button id="translate-button" class="btn btn-light">
+                            <i class="fas fa-globe"></i>
+                        </button>
+                        <div id="google_translate_element" style="display:none;"></div>
+                    </li>
                 </ul>
             </nav>
         </div>
-    </header>
-    
+    </header>    
 
-<main>
-    <section id="welcome">
-        <h2>مرحبا، أنا أحمد خالد</h2>
-        <h3>كيف حالك؟</h3>
-        <p>مصمم مواقع ويب وحلول برمجية متنوعة.</p>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2>من أنا</h2>
-            <p>ولدت في عام 2000 وأعيش في مصر، القاهرة، منطقة العباسية. لدي شغف كبير بالحواسيب والأكواد منذ أن كنت في الثالثة عشرة من عمري، وأنا الآن في مستوى جيد جدًا وأطمح للمزيد والمزيد.</p>
-            <figure>
-                <img src="2024-08-24_131901.png" alt="Ahmed Khaled">
-            </figure>
-        </div>
-    </section>
-
+    <main>
+        <section id="welcome">
+            <h2 id="welcome-title">Hello, I am Ahmed Khaled</h2>
+            <h1><p id="welcome-desc">Web designer and software developer.</p></h1>
+            <h3 id="welcome-subtitle">How are you?</h3>            
+        </section>
+        
+        <section id="about">
+            <div class="container">
+                <h2 id="about-title">About Me</h2>
+                <p id="about-desc">I was born in 2000 and live in Cairo, Egypt. I have a great passion for computers and coding since I was 13 years old, and now I am at a very good level and aspire for more.</p>
+                <figure>
+                    <img src="2024-08-24_131901.png" alt="Ahmed Khaled - Web Designer and Software Developer" loading="lazy">
+                </figure>
+            </div>
+        </section>       
     <section id="services">
         <div class="container">
-            <h3>الخدمات</h3>
+            <h3>Services</h3>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                            <h4>تصميم المواقع</h4>
-                            <p>تصميم مواقع ويب احترافية ومبتكرة تناسب احتياجات عملك.</p>
+                            <h4>Web Design</h4>
+                            <p>Professional and innovative web design that meets your business needs.</p>
                         </div>
                     </div>
                 </div>
@@ -393,8 +118,8 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                            <h4>تطوير تطبيقات المحمول</h4>
-                            <p>تطوير تطبيقات موبايل عالية الجودة لمنصات iOS و Android.</p>
+                            <h4>Mobile App Development</h4>
+                            <p>High-quality mobile app development for iOS and Android platforms.</p>
                         </div>
                     </div>
                 </div>
@@ -402,8 +127,8 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="service-icon"><i class="fas fa-database"></i></div>
-                            <h4>إدارة قواعد البيانات</h4>
-                            <p>إدارة وتحسين قواعد البيانات لضمان الأداء الأمثل.</p>
+                            <h4>Database Management</h4>
+                            <p>Manage and optimize databases to ensure optimal performance.</p>
                         </div>
                     </div>
                 </div>
@@ -413,7 +138,7 @@
 
     <section id="skills">
         <div class="container">
-            <h3>المهارات</h3>
+            <h3>Skills</h3>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
@@ -448,15 +173,15 @@
 
     <section id="projects">
         <div class="container">
-            <h3>المشاريع</h3>
+            <h3>Projects</h3>
             <div class="row">
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <img src="your-project-image-1-link" alt="Project 1" class="img-fluid mb-3">
-                            <h4>مشروع إدارة المحتوى</h4>
-                            <p>نظام إدارة محتوى متقدم يمكنك من إدارة موقعك بسهولة.</p>
-                            <a href="#" class="btn btn-primary">عرض المشروع</a>
+                            <h4>Content Management System</h4>
+                            <p>An advanced content management system that allows you to easily manage your site.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -464,9 +189,9 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="your-project-image-2-link" alt="Project 2" class="img-fluid mb-3">
-                            <h4>تطبيق متجر إلكتروني</h4>
-                            <p>تطبيق موبايل يسهل عملية التسوق الإلكتروني.</p>
-                            <a href="#" class="btn btn-primary">عرض المشروع</a>
+                            <h4>Online Store App</h4>
+                            <p>A mobile app that facilitates online shopping.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -474,9 +199,9 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="your-project-image-3-link" alt="Project 3" class="img-fluid mb-3">
-                            <h4>لوحة تحكم متقدمة</h4>
-                            <p>لوحة تحكم كاملة لإدارة بيانات موقعك الإلكتروني.</p>
-                            <a href="#" class="btn btn-primary">عرض المشروع</a>
+                            <h4>Advanced Dashboard</h4>
+                            <p>A complete dashboard for managing your website data.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -484,9 +209,9 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="your-project-image-4-link" alt="Project 4" class="img-fluid mb-3">
-                            <h4>تطبيق إدارة المهام</h4>
-                            <p>تطبيق يساعدك في إدارة المهام والمشاريع بكفاءة.</p>
-                            <a href="#" class="btn btn-primary">عرض المشروع</a>
+                            <h4>Task Management App</h4>
+                            <p>An app that helps you manage tasks and projects efficiently.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -494,9 +219,9 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="your-project-image-5-link" alt="Project 5" class="img-fluid mb-3">
-                            <h4>موقع تعليمي تفاعلي</h4>
-                            <p>موقع يوفر بيئة تفاعلية لتعلم البرمجة والتكنولوجيا.</p>
-                            <a href="#" class="btn btn-primary">عرض المشروع</a>
+                            <h4>Interactive Learning Site</h4>
+                            <p>A site that provides an interactive environment for learning programming and technology.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -504,9 +229,9 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="your-project-image-6-link" alt="Project 6" class="img-fluid mb-3">
-                            <h4>نظام حجز المواعيد</h4>
-                            <p>نظام حجز مواعيد متكامل للشركات والمراكز الصحية.</p>
-                            <a href="#" class="btn btn-primary">عرض المشروع</a>
+                            <h4>Appointment Booking System</h4>
+                            <p>An integrated appointment booking system for companies and healthcare centers.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -516,21 +241,21 @@
 
     <section id="certificates">
         <div class="container">
-            <h3>الشهادات</h3>
+            <h3>Certificates</h3>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>مبادرة مليون مبرمج عربي</h4>
-                            <p>شهادة من المبادرة.</p>
+                            <h4>One Million Arab Coders Initiative</h4>
+                            <p>Certificate from the initiative.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>مبادرة RoboGarden</h4>
-                            <p>شهادة من المبادرة.</p>
+                            <h4>RoboGarden Initiative</h4>
+                            <p>Certificate from the initiative.</p>
                         </div>
                     </div>
                 </div>
@@ -540,32 +265,32 @@
 
     <section id="blog">
         <div class="container">
-            <h3>المدونة</h3>
+            <h3>Blog</h3>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>مقالة عن تصميم الويب</h4>
-                            <p>تفاصيل عن أحدث تقنيات تصميم الويب.</p>
-                            <a href="#" class="btn btn-secondary">قراءة المزيد</a>
+                            <h4>A Web Design Article</h4>
+                            <p>Details about the latest web design techniques.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>أهمية تجربة المستخدم</h4>
-                            <p>كيف يمكن لتجربة المستخدم تحسين موقعك.</p>
-                            <a href="#" class="btn btn-secondary">قراءة المزيد</a>
+                            <h4>The Importance of User Experience</h4>
+                            <p>How user experience can improve your website.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>أفضل ممارسات SEO</h4>
-                            <p>كيفية تحسين موقعك لمحركات البحث.</p>
-                            <a href="#" class="btn btn-secondary">قراءة المزيد</a>
+                            <h4>Best SEO Practices</h4>
+                            <p>How to optimize your site for search engines.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -575,119 +300,52 @@
 
     <section id="contact">
         <div class="container">
-            <h3>تواصل معي</h3>
+            <h3>Contact Me</h3>
             <form class="row g-3">
                 <div class="col-md-6">
-                    <label for="name" class="form-label">الاسم</label>
-                    <input type="text" class="form-control" id="name" placeholder="اسمك" required>
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="email" class="form-label">البريد الإلكتروني</label>
-                    <input type="email" class="form-control" id="email" placeholder="بريدك الإلكتروني" required>
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="col-12">
-                    <label for="message" class="form-label">الرسالة</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="رسالتك"></textarea>
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">إرسال</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </div>
             </form>
         </div>
     </section>
 </main>
-
-<footer>
-    <div class="container">
-        <div class="footer-info">
-            <p><i class="fas fa-envelope"></i> kepv185@icloud.com</p>
-            <p><i class="fas fa-phone"></i> +201121199859</p>
-            <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p><i class="fas fa-envelope"></i> kepv185@icloud.com</p>
+                <p><i class="fas fa-phone"></i> +20 1121199859</p>
+                <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/KEPV18" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/kepv185/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/kepvv" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="footer-subscribe">
+                <p>Subscribe to our offers:</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <p>© 2024 Ahmed Khaled. All rights reserved.</p>
         </div>
-        <div class="footer-social">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-telegram"></i></a>
-        </div>
-        <div class="footer-subscribe">
-            <p>اشترك لتصلك عروضنا:</p>
-            <form>
-                <input type="email" placeholder="بريدك الإلكتروني">
-                <button type="submit">اشترك</button>
-            </form>
-        </div>
-        <p>© 2024 أحمد خالد. جميع الحقوق محفوظة.</p>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    // إضافة وظائف لفتح وإغلاق القائمة المنسدلة
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-
-    navbarToggler.addEventListener('click', () => {
-        navbarCollapse.classList.toggle('show');
-        navbarToggler.classList.toggle('open'); // تغيير لون الأيقونة عند الفتح
-    });
-
-    function switchLanguage() {
-        var currentLang = document.documentElement.lang;
-        if (currentLang === "ar") {
-            document.documentElement.lang = "en";
-            document.body.style.direction = "ltr"; /* تحويل اتجاه النص إلى LTR للغة الإنجليزية */
-            document.title = "Ahmed Khaled - Web Designer and Software Developer";
-
-            // Update all other content based on the new language
-            document.querySelector('h1').textContent = "Ahmed Khaled";
-            document.querySelector('#welcome h2').textContent = "Hello, I'm Ahmed Khaled";
-            document.querySelector('#welcome h3').textContent = "How are you?";
-            document.querySelector('#welcome p').textContent = "Web Designer and Software Solutions Developer.";
-            document.querySelector('#about h2').textContent = "About Me";
-            document.querySelector('#about p').textContent = "I was born in 2000 and live in Cairo, Egypt. I have had a passion for computers and coding since I was 13 years old, and I am now at a very good level and aspire for more.";
-            document.querySelector('#services h3').textContent = "Services";
-            document.querySelector('#skills h3').textContent = "Skills";
-            document.querySelector('#projects h3').textContent = "Projects";
-            document.querySelector('#certificates h3').textContent = "Certificates";
-            document.querySelector('#blog h3').textContent = "Blog";
-            document.querySelector('#contact h3').textContent = "Contact Me";
-
-            // Update footer
-            document.querySelector('.footer-info p:nth-child(1)').textContent = "Email: kepv185@icloud.com";
-            document.querySelector('.footer-info p:nth-child(2)').textContent = "Phone: +20 1121199859";
-            document.querySelector('.footer-info p:nth-child(3)').textContent = "Address: Cairo, Egypt";
-            document.querySelector('.footer-subscribe p').textContent = "Subscribe to our offers:";
-            document.querySelector('.footer-subscribe button').textContent = "Subscribe";
-            document.querySelector('footer p:last-child').textContent = "© 2024 Ahmed Khaled. All rights reserved.";
-        } else {
-            document.documentElement.lang = "ar";
-            document.body.style.direction = "rtl"; /* تحويل اتجاه النص إلى RTL للغة العربية */
-            document.title = "أحمد خالد - مصمم مواقع وبرمجيات";
-
-            // Update all other content based on the new language
-            document.querySelector('h1').textContent = "أحمد خالد";
-            document.querySelector('#welcome h2').textContent = "مرحبا، أنا أحمد خالد";
-            document.querySelector('#welcome h3').textContent = "كيف حالك؟";
-            document.querySelector('#welcome p').textContent = "مصمم مواقع ويب وحلول برمجية.";
-            document.querySelector('#about h2').textContent = "من أنا";
-            document.querySelector('#about p').textContent = "ولدت في عام 2000 وأعيش في مصر، القاهرة، منطقة العباسية. لدي شغف كبير بالحواسيب والأكواد منذ أن كنت في الثالثة عشرة من عمري، وأنا الآن في مستوى جيد جدًا وأطمح للمزيد.";
-            document.querySelector('#services h3').textContent = "الخدمات";
-            document.querySelector('#skills h3').textContent = "المهارات";
-            document.querySelector('#projects h3').textContent = "المشاريع";
-            document.querySelector('#certificates h3').textContent = "الشهادات";
-            document.querySelector('#blog h3').textContent = "المدونة";
-            document.querySelector('#contact h3').textContent = "تواصل معي";
-
-            // Update footer
-            document.querySelector('.footer-info p:nth-child(1)').textContent = "البريد الإلكتروني: kepv185@icloud.com";
-            document.querySelector('.footer-info p:nth-child(2)').textContent = "الهاتف: +20 1121199859";
-            document.querySelector('.footer-info p:nth-child(3)').textContent = "العنوان: القاهرة، مصر";
-            document.querySelector('.footer-subscribe p').textContent = "اشترك لتصلك عروضنا:";
-            document.querySelector('.footer-subscribe button').textContent = "اشترك";
-            document.querySelector('footer p:last-child').textContent = "© 2024 أحمد خالد. جميع الحقوق محفوظة.";
-        }
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
