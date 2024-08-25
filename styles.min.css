@@ -1,37 +1,33 @@
 :root {
-    --primary-color: #e60000;
-    --secondary-color: #1c1c1c;
-    --text-color: #ffffff;
-    --muted-text-color: #bbbbbb;
+    --primary-color: #0056b3; /* الأزرق */
+    --secondary-color: #121212; /* لون الثيم الداكن */
+    --text-color: #ffffff; /* لون النص */
+    --muted-text-color: #bbbbbb; /* لون النص المخفف */
+    --hover-color: #0073e6; /* لون التفاعل */
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     background-color: var(--secondary-color);
-    color: var(--text-color);
+    color:wheat;
     scroll-behavior: smooth;
     margin: 0;
 }
 
 
 header {
-    color: var(--text-color);
-}
-
-header {
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--secondary-color);
-    height: 10%; /* تأكد من أن هذا يعادل أو يتجاوز ارتفاع الهيدر */
+    height: 10%;
     padding: 1rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
 }
 
-
-
-
 header h1 {
+    display: flex;
+    align-items: center;
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--primary-color);
@@ -40,7 +36,7 @@ header h1 {
 
 #logo {
     height: 50px;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .navbar-nav {
@@ -118,7 +114,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--hover-color);
 }
 
 #about img {
@@ -132,14 +128,27 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #2c2c2c;
+    background-color: var(--secondary-color);
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     margin-bottom: 20px;
     will-change: transform;
 }
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+
+.card-body {
+    padding: 2.5rem;
+}
+
 
 .card:hover {
     transform: translateY(-10px);
@@ -171,7 +180,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--text-color);
+    color: var(--hover-color);
 }
 
 .footer-subscribe input[type="email"] {
@@ -193,13 +202,13 @@ footer a:hover {
 }
 
 .footer-subscribe button:hover {
-    background-color: #b30000;
+    background-color: var(--hover-color);
 }
 
 header .container ul {
     display: flex;
-    flex-direction: row; /* تأكد من أن الاتجاه هو row */
-    flex-wrap: nowrap; /* منع التفاف العناصر */
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
@@ -212,35 +221,17 @@ header .container {
     align-items: center;
 }
 
-header #logo {
-    height: 50px;
-    margin-right: 10px; /* استخدم margin-left إذا كان الاتجاه RTL */
-}
-
-header h1 {
-    display: flex;
-    align-items: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-header h1 img {
-    margin-left: 10px; /* استخدم margin-right إذا كان الاتجاه RTL */
-    height: 50px;
-}
-
 #welcome {
     padding: 100px 0;
-    background: #1c1c1c;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--text-color);
     text-align: center;
 }
 
 #welcome h2 {
     font-size: 3rem;
     font-weight: bold;
-    color: var(--primary-color); /* استخدم اللون الأساسي الجديد */
+    color: var(--primary-color);
 }
 
 #welcome h3 {
@@ -257,7 +248,7 @@ header h1 img {
 
 #about {
     padding: 4rem 0;
-    background-color: #121212;
+    background-color: var(--secondary-color);
 }
 
 #about h2 {
@@ -279,15 +270,6 @@ header h1 img {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
-}
-
-#about img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
 #about img:hover {
@@ -313,8 +295,7 @@ body {
     border: none;
     font-size: 1rem;
     line-height: 1.5;
-    color: #ffffff;
-    
+    color: var(--text-color);
 }
 
 #translate-button {
@@ -322,38 +303,7 @@ body {
     padding: 10px;
     border: none;
     background-color: transparent;
-    color: #ffffff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    outline: none;
-}
-
-#translate-button:focus {
-    outline: none;
-}
-
-#translate-button:active {
-    animation: sparkle 0.5s ease;
-}
-
-@keyframes sparkle {
-    0% {
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    }
-    50% {
-        box-shadow: 0 0 15px rgba(255, 255, 255, 1);
-    }
-    100% {
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    }
-}
-
-#translate-button {
-    position: relative;
-    padding: 10px;
-    border: none;
-    background-color: transparent;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 1.5rem;
     cursor: pointer;
     outline: none;
@@ -383,7 +333,7 @@ body {
     content: "Translate";
     position: absolute;
     top: 50%;
-    left: 100%; /* Adjusted to show on the right side of the button */
+    left: 100%;
     transform: translateY(-50%);
     background-color: #ffffff;
     color: #000;
@@ -392,4 +342,173 @@ body {
     white-space: nowrap;
     font-size: 1rem;
     margin-left: 10px;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    color: #ffffff;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--hover-color);
+    transition: color 0.3s ease-in-out;
+}
+
+#welcome {
+    padding: 100px 0;
+    background: url('logo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+svg:hover path {
+    fill: var(--hover-color);
+    transition: fill 0.3s ease;
+}
+
+.hr-line {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: var(--hover-color);
+    transform: scale(1.1);
+}
+
+.banner {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+body {
+    background: linear-gradient(to right, #000428, #004e92);
+}
+
+#about, #services {
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color);
+    border-bottom: 2px solid var(--hover-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.section-divider {
+    margin: 50px 0;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.contact-section {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #0056b3;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form .form-label {
+    color: #bbbbbb;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+.contact-form .form-control {
+    background-color: #1c1c1c;
+    border: 1px solid #444;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    transition: border-color 0.3s
+}
+.contact-form .form-control:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5);
+}
+
+.contact-form textarea.form-control {
+    resize: none; /* لمنع تغيير حجم مربع النص */
+    height: auto;
+    min-height: 150px; /* ارتفاع مبدئي مناسب */
+}
+
+.contact-form button.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.contact-form button.btn-primary:hover {
+    background-color: #0073e6;
+    transform: translateY(-3px); /* رفع الزر قليلاً عند التحويم */
+    box-shadow: 0 4px 15px rgba(0, 115, 230, 0.4); /* تأثير الظل عند التحويم */
+}
+
+.contact-form button.btn-primary:active {
+    background-color: #004a99;
+    transform: translateY(0); /* إعادة الزر لوضعه الطبيعي عند الضغط */
+    box-shadow: none;
+}
+
+.contact-form .form-control::placeholder {
+    color: #aaaaaa; /* تغيير لون النص التوضيحي (placeholder) */
+}
+
+.contact-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-section {
+    background-image: linear-gradient(to right, #000428, #004e92); /* خلفية متدرجة */
+    border-radius: 15px; /* حواف دائرية للقسم بأكمله */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* تأثير الظل على القسم */
 }
